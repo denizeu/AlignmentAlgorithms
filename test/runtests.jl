@@ -34,7 +34,6 @@ end
 @testset "nwalign" begin
     seq1 = "AAGT"
     seq2 = "GCAT"
-
     #NWalign test
     @test nwalign(seq1, seq2) isa Tuple #For one best alignment
     @test nwalign(seq1, seq2) isa Vector{Tuple{String, String}} #For multiple alignments
@@ -43,9 +42,9 @@ end
     @testset "Scoring matrix setup" begin
         m = nwsetupmatrix("AATT", "AAGTT")
         
-        @test m isa Matrix
-        @test size(m, 1) == 5
-        @test size(m, 2) == 6
-        @test all(==(0), m)
+    @test m isa Matrix
+    @test size(m, 1) == 5
+    @test size(m, 2) == 6
+    @test all(==(0), m)
     end
 end

@@ -2,7 +2,7 @@ module BISC195Labs
 
 export nwscore
 export nwalign
-export nwsetupmatrix
+#export nwsetupmatrix
 
 include("needleman_wunch.jl")
 
